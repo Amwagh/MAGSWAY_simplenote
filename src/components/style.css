@@ -1,0 +1,109 @@
+/* Header Section CSS */
+.edit_button{
+    border: none;
+    margin: 5px;
+}
+.header_section{
+    border-bottom: 1px solid #8c8f94;
+}
+
+/* Leftside CSS */
+.toggle-menu-icon{
+    color: #8c8f94;
+    font-size: 20px;
+    margin: 15px;
+    float: left;
+}
+h6{
+    color: #ffffff;
+    margin: 15px;
+    float: left;
+    margin:15px 100px 0 100px;
+}
+.left_side{
+    border-bottom: 1px solid #8c8f94;
+}
+
+
+/* Right Side CSS */
+.toolbar-icons-right{
+    float: right;    
+    font-size: 20px;    
+    color: #8c8f94;
+    margin: 15px;
+}
+.toolbar-icons{
+    color: #8c8f94;
+    font-size: 20px;
+    margin: 15px;
+}
+.right_side{
+    border-bottom: 1px solid #8c8f94;
+}
+.search{
+    color: #ffffff;
+}
+input{
+    width: 80%;
+    border: none;
+    color: #ffffff;
+    margin-left: 10px;
+    margin-top: 10px;
+}
+input:focus{
+    outline: none;
+}
+.note_section{
+    margin-top: 30px;
+    border: none;
+    color: #ffffff;
+}
+.note_section:focus{
+    outline: none;
+}
+
+/* Sidebar Section  */
+.sidebar{
+    height: 100vh;
+    width: 200px;
+    color: #8c8f94;
+    position: absolute;
+    display: flex;
+    flex: none;
+    flex-direction: column;
+    top: 0px;
+    left: 0;
+    transform: translateX(-100%);
+    transition: all 0.4s ease-in-out;
+    padding-top: 10px;
+}
+.hide{
+    transform: translateX(0%);
+}
+.sidebar ul li {
+    text-align: center;
+    list-style-type:none;
+    padding: 10px 0px; 
+    font-size: 15px; 
+    color: #ffffff;  
+}
+.sidebar_menu{
+    margin-top: 100px;
+}
+/* Close Sidebar */
+.close_sidebar{
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;    
+}
+.sidebar_open{
+    display: block;
+}
+.sidebar_icons{
+    margin-right: 18px;
+    display: inline-block;
+    vertical-align: middle;
+    font-size: 20px;
+}

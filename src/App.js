@@ -1,25 +1,37 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from 'react';
+import "./App.css"
+import "../node_modules/bootstrap/dist/css/bootstrap.min.css"
+import LeftSide from './components/LeftSide';
+import RightSide from './components/RightSide';
+import Header from './components/Header';
+import Sidebar from './components/Sidebar';
+import CloseSidebar from './components/CloseSidebar';
 
-function App() {
+
+
+const App = () => {
+  const [hide, setHide] = useState(false);
+
+  const handleSidebar = () => {
+    setHide(!hide)
+  }
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Header click={handleSidebar} />
+
+      <div className="container-fluid">
+        <div className="row">
+          <div className="col-md-4">
+            {/* <CloseSidebar click={handleSidebar} hide={hide} /> */}
+            <Sidebar hide={hide} />
+            <LeftSide />
+          </div>
+          <div className="col-md-8">{/* <RightSide/> */}</div>
+        </div>
+      </div>
+    </>
   );
 }
 
-export default App;
+export default App
